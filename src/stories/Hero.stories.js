@@ -1,6 +1,7 @@
 import React from "react";
 
 import Hero from "../components/Hero";
+import BgHeroImage from "./assets/bg.jpg";
 
 export default {
   title: "Hero",
@@ -8,13 +9,13 @@ export default {
 };
 
 export const usage = () => (
-  <Hero title="Ganhe sua liberdade para ir e vir">
+  <Hero title="Ganhe sua liberdade para ir e vir" image={BgHeroImage}>
     <p>A escola é lider em aprovação</p>
   </Hero>
 );
 
 export const withList = () => (
-  <Hero title="Ganhe sua liberdade para ir e vir">
+  <Hero title="Ganhe sua liberdade para ir e vir" image={BgHeroImage}>
     <ul>
       <li>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore fugit
