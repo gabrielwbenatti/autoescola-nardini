@@ -2,8 +2,6 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 const Title = styled.h1`
-  @import url("https://fonts.googleapis.com/css2?family=Gantari:wght@300;600;700&display=swap");
-  font-family: "Gantari", sans-serif;
   font-weight: 700;
   letter-spacing: 2;
 `;
@@ -26,19 +24,38 @@ const Content = styled.div`
 `;
 
 const Root = styled.div`
+  color: #fff;
+  padding: 80px 0px;
+
   ${(props) => css`
-    background: url(${props.image}, rgba(0, 0, 0, 0.4));
+    background: url(${props.image}), rgba(0, 0, 0, 0.5);
     background-size: cover;
     background-position: center;
+    background-blend-mode: overlay;
   `}
+`;
+
+const Container = styled.div`
+  background-color: blue;
+  width: 100%;
+  padding: 0 8px;
+
+  @media (min-width: 768px) {
+    padding: 0 16px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1140px;
+    margin: 0 auto;
+  }
 `;
 
 const Hero = ({ image, title, children }) => (
   <Root image={image}>
-    <div>
+    <Container>
       <Title>{title}</Title>
       <Content>{children}</Content>
-    </div>
+    </Container>
   </Root>
 );
 
