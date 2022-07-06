@@ -19,21 +19,15 @@ export const withList = () => (
     <ul>
       <li>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore fugit
-        saepe, dolorem quaerat expedita minima neque nulla sint perferendis
-        facilis delectus ad maiores ipsa officia? Ut ipsum dicta consequatur
-        magnam.
+        saepe.
       </li>
       <li>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet aliquid
-        sunt voluptatum ab necessitatibus ipsa officia consectetur doloribus,
-        rerum numquam earum provident eius nesciunt molestias quidem natus odio
-        aliquam excepturi?
+        sunt voluptatum ab necessitatibus?
       </li>
       <li>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-        quas architecto sed nihil! Distinctio, a deserunt dolor atque neque,
-        eaque laborum, laboriosam dolore nulla dolorem ad voluptates facere ex
-        tempore.
+        quas architecto.
       </li>
     </ul>
   </Hero>
