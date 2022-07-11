@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+import { breakAt, BreakpointsSizes } from "./Breakpoints";
+
 const Title = styled.h1`
   font-weight: 700;
   letter-spacing: 2;
@@ -36,16 +38,16 @@ const Root = styled.div`
 `;
 
 const Container = styled.div`
-  background-color: blue;
   width: 100%;
   padding: 0 8px;
 
-  @media (min-width: 768px) {
+  ${breakAt(BreakpointsSizes.sm)} {
     padding: 0 16px;
   }
 
-  @media (min-width: 1200px) {
+  ${breakAt(BreakpointsSizes.lg)} {
     width: 1140px;
+    padding: 0;
     margin: 0 auto;
   }
 `;
