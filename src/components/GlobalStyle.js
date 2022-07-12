@@ -12,7 +12,7 @@ html {
     box-sizing: border-box;
 }
 
-*,*::before,*::after {
+*, *::before, *::after {
     box-sizing: inherit;
 }
 
@@ -20,11 +20,17 @@ body {
     margin: 0;
 }
 
-h1, h2,h3,h4,h5,h6{
+h1, h2, h3, h4, h5, h6 {
     line-height: 1.3;
     font-weight: 700;
     letter-spacing: 2px;
+    
+    strong {
+    color: "#ffc107";
 }
+}
+
+
 
 h1 {
     font-size: 2.5rem;
