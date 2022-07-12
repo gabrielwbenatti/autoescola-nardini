@@ -6,42 +6,38 @@ import { breakAt, BreakpointsSizes } from "./Breakpoints";
 
 const colorYellow = "#ffc107";
 
-const Title = styled.h1`
-  position: relative;
-  font-weight: 700;
-  letter-spacing: 2;
-  /* margin-bottom: 25px; */
-  padding-bottom: 25px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 2.5rem;
+// const Title = styled.h1`
+//   position: relative;
+//   font-weight: 700;
+//   letter-spacing: 2;
+//   /* margin-bottom: 25px; */
+//   padding-bottom: 25px;
+//   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+//   font-size: 2.5rem;
 
-  /* font-size: 3.75rem; */
+//   /* font-size: 3.75rem; */
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    background-color: ${colorYellow};
-    height: 5px;
-    width: 70px;
-  }
-
-  strong {
-    color: ${colorYellow};
-  }
-`;
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     bottom: -3px;
+//     background-color: ${colorYellow};
+//     height: 5px;
+//     width: 70px;
+//   }
+// `;
 
 const Content = styled.div`
   p,
   li {
     font-size: 20px;
     font-weight: 300;
-  }
 
-  li::before {
-    content: "\\2713\\0020";
-    color: ${colorYellow};
+    &::before {
+      content: "\\2713\\0020";
+      color: ${colorYellow};
+    }
   }
 
   ul {
@@ -77,10 +73,9 @@ const Container = styled.div`
   }
 `;
 
-const Hero = ({ image, title, children }) => (
+const Hero = ({ image, children }) => (
   <Root image={image}>
     <Container>
-      <Title>{title}</Title>
       <Content>{children}</Content>
     </Container>
   </Root>
@@ -88,7 +83,6 @@ const Hero = ({ image, title, children }) => (
 
 Hero.propTypes = {
   image: PropTypes.string,
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
   children: PropTypes.node,
 };
 
